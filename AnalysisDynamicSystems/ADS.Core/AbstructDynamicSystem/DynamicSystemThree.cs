@@ -1,20 +1,11 @@
 ﻿using System.Numerics;
 
-namespace ADS.Core;
-
+namespace ADS.Core.AbstructDynamicSystem;
 /// <summary>
-/// Динамическая система
+/// Динамическая система размерности 3
 /// </summary>
-public abstract class DynamicSystemsThree
+public abstract class DynamicSystemThree: DynamicSystem<Vector3>
 {
-    /// <summary>
-    /// Наименование динамической системы
-    /// </summary>
-    public string Name { get; private set; }
-    /// <summary>
-    /// Размерность
-    /// </summary>
-    public byte Dimension { get; private set; }
     /// <summary>
     /// Уравнение проекции скорости на ось OX
     /// </summary>
@@ -34,7 +25,7 @@ public abstract class DynamicSystemsThree
     /// <returns>Проекция значения скорости на ось OZ</returns>
     public abstract float Fz(Vector3 vector);
 
-    public Vector3 NextVector(Vector3 vector, float steap)
+    public override Vector3 NextVector(Vector3 vector, float steap)
     {
         throw new Exception();
     }
