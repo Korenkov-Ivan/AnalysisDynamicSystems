@@ -24,9 +24,4 @@ public abstract class DynamicSystemThree: DynamicSystem<Vector3>
     /// <param name="vector">Начальный вектор</param>
     /// <returns>Проекция значения скорости на ось OZ</returns>
     public abstract float Fz(Vector3 vector);
-
-    public override Vector3 NextVector(Vector3 vector, float steap)
-    {
-        throw new Exception();
-    }
 }
