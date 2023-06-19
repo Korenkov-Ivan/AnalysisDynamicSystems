@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalysisDynamicSystems", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADS.Core", "ADS.Core\ADS.Core.csproj", "{A9FB3944-E1DF-4A57-B46E-1FA6E07FFC45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADS.Core.Test", "ADS.Core.Test\ADS.Core.Test.csproj", "{DFF4D04E-2878-4E1E-801B-AFDAA615E001}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{A9FB3944-E1DF-4A57-B46E-1FA6E07FFC45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9FB3944-E1DF-4A57-B46E-1FA6E07FFC45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9FB3944-E1DF-4A57-B46E-1FA6E07FFC45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFF4D04E-2878-4E1E-801B-AFDAA615E001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFF4D04E-2878-4E1E-801B-AFDAA615E001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFF4D04E-2878-4E1E-801B-AFDAA615E001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFF4D04E-2878-4E1E-801B-AFDAA615E001}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
