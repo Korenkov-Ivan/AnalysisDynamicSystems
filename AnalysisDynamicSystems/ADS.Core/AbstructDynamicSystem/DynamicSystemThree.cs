@@ -36,6 +36,11 @@ public abstract class DynamicSystemThree: DynamicSystem<Vector3>
 
     private Vector3 NextVectorEuerMethod(Vector3 vector, float steap)
     {
-        throw new Exception();
+        return new Vector3()
+        {
+            X = vector.X + Fx(vector) * steap,
+            Y = vector.Y + Fy(vector) * steap,
+            Z = vector.Z + Fz(vector) * steap,
+        };
     }
 }
