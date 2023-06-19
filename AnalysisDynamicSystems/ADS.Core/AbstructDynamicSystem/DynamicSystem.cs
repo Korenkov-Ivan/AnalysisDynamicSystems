@@ -13,6 +13,10 @@ public abstract class DynamicSystem<T>
     /// Размерность
     /// </summary>
     public byte Dimension { get; private set; }
+    /// <summary>
+    /// Тип интеграции
+    /// </summary>
+    public TypeIntegration MethodIntegration { get; set; }
 
     /// <summary>
     /// Метод интеграции дифференциального уравнения
@@ -20,5 +24,6 @@ public abstract class DynamicSystem<T>
     /// <param name="vector">Начальный вектор</param>
     /// <param name="steap">Шаг интегрирования</param>
     /// <returns>Конечный вектор</returns>
-    public abstract T NextVector(T vector, float steap);
+    public abstract T NextVector(T vector, float steap, TypeIntegration typeIntegration);
+    public T NextVector(T vector, float steap) => NextVector(vector, steap, MethodIntegration);
 }
