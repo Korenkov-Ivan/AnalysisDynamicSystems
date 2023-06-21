@@ -30,6 +30,7 @@ public abstract class DynamicSystemThree: DynamicSystem<Vector3>
         return typeIntegration switch
         {
             TypeIntegration.EulerMethod => NextVectorEuerMethod(vector, steap),
+            TypeIntegration.RyngeKytta => NextVectorRyngeKytta(vector, steap),
             _ => throw new Exception("Нет указанного метода интеграции")
         };
     }

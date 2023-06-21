@@ -9,4 +9,8 @@ public enum TypeIntegration
     /// Метод эллера
     /// </summary>
     EulerMethod,
+    /// <summary>
+    /// Метод Рунге-Кутты 4-го порядка
+    /// </summary>
+    RyngeKytta,
 }
