@@ -6,6 +6,7 @@ namespace ADS.Core.AbstructDynamicSystem;
 /// </summary>
 public abstract class DynamicSystemThree: DynamicSystem<Vector3>
 {
+    private const byte DIMENSION = 3;
     /// <summary>
     /// Уравнение проекции скорости на ось OX
     /// </summary>
@@ -79,4 +80,7 @@ public abstract class DynamicSystemThree: DynamicSystem<Vector3>
         return vector;
 
     }
+
+    public DynamicSystemThree(string Name, TypeIntegration typeIntegration = TypeIntegration.RyngeKytta)
+        :base(Name, DIMENSION, typeIntegration) { }
 }
