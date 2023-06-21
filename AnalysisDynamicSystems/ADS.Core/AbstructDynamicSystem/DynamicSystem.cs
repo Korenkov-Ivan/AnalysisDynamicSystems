@@ -18,6 +18,33 @@ public abstract class DynamicSystem<T>
     /// </summary>
     public TypeIntegration MethodIntegration { get; set; }
 
+    public float this [string parametrName]
+    {
+        get
+        {
+            if (Parametr.TryGetValue(parametrName, out var parametr))
+            {
+                return parametr;
+            }
+            else
+            {
+                throw new Exception($"В системе {Name} нет параметра {parametrName}");
+            }
+        }
+        set
+        {
+            if (Parametr.ContainsKey(parametrName))
+            {
+                Parametr[parametrName] = value;
+            }
+            else
+            {
+                throw new Exception($"В системе {Name} нет параметра {parametrName}");
+            }
+        }
+    }
+    protected Dictionary<string, float> Parametr;
+
     /// <summary>
     /// Метод интеграции дифференциального уравнения
     /// </summary>
@@ -26,4 +53,9 @@ public abstract class DynamicSystem<T>
     /// <returns>Конечный вектор</returns>
     public abstract T NextVector(T vector, float steap, TypeIntegration typeIntegration);
     public T NextVector(T vector, float steap) => NextVector(vector, steap, MethodIntegration);
+    /// <summary>
+    /// Возврашает стартовое положение вектора для системы
+    /// </summary>
+    /// <returns></returns>
+    public abstract T GetDefaultStartVector();
 }
