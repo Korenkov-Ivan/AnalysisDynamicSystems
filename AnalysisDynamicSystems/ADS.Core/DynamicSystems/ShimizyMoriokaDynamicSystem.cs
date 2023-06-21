@@ -28,5 +28,5 @@ public class ShimizyMoriokaDynamicSystem: DynamicSystemThree
             {ALPHA, DEFAULT_ALPHA},
         };
     }
-
+    public override Vector3 GetDefaultStartVector() => new Vector3(0.01f, 0, 0);
 }
