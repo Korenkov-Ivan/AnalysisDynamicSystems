@@ -58,4 +58,11 @@ public abstract class DynamicSystem<T>
     /// </summary>
     /// <returns></returns>
     public abstract T GetDefaultStartVector();
+
+    public DynamicSystem(string name, byte dimension, TypeIntegration typeIntegration)
+    {
+        Name = name;
+        Dimension = dimension;
+        MethodIntegration = typeIntegration;
+    }
 }

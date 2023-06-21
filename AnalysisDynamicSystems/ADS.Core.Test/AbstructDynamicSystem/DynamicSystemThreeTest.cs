@@ -33,5 +33,10 @@ public class DynamicSystemThreeTest
         public override float Fx(Vector3 vector) => vector.X;
         public override float Fy(Vector3 vector) => vector.Y;
         public override float Fz(Vector3 vector) => vector.Z;
+
+        public override Vector3 GetDefaultStartVector()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
