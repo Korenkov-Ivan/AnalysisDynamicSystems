@@ -10,7 +10,7 @@ public class LyapynovExponentCalculate: CalculateThree<float, LyapynovExponentPa
 
     public override float Activate(LyapynovExponentParametrs item)
     {
-        
+        throw new Exception();
     }
 }
 
