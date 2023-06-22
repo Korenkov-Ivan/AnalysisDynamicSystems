@@ -15,7 +15,7 @@ public abstract class Calculate<TDynamicSystem, TResult, TActivate>
     /// Динамическая система
     /// </summary>
     public DynamicSystem<TDynamicSystem> CurrentDynamicSystem { get; protected set; }
-    
+
     public Calculate(DynamicSystem<TDynamicSystem> dynamicSystem)
     {
         CurrentDynamicSystem = dynamicSystem;
@@ -26,9 +26,4 @@ public abstract class Calculate<TDynamicSystem, TResult, TActivate>
     /// <param name="item">Передаваемые параметры</param>
     /// <returns>Результат</returns>
     public abstract TResult Activate(TActivate item);
-    /// <summary>
-    /// Акт вычисления
-    /// </summary>
-    /// <returns>Результат</returns>
-    public abstract TResult Activate();
 }
