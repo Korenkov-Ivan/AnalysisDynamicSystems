@@ -9,11 +9,12 @@ namespace ADS.Core.AbstructCalculate;
 /// <typeparam name="TResult">Тип результата</typeparam>
 /// <typeparam name="TActivate">Тип передаваемых параметров</typeparam>
 public abstract class Calculate<TDynamicSystem, TResult, TActivate>
+// TODO здесь надо поставить ограничения на типы
 {
     /// <summary>
     /// Динамическая система
     /// </summary>
-    public DynamicSystem<TDynamicSystem> CurrentDynamicSystem { get; private set; }
+    public DynamicSystem<TDynamicSystem> CurrentDynamicSystem { get; protected set; }
     
     public Calculate(DynamicSystem<TDynamicSystem> dynamicSystem)
     {
